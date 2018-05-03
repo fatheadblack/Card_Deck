@@ -78,7 +78,7 @@ public:
 
 	}
 
-	friend void show(const std::vector<Card>& cs);
+	friend void show(const std::vector<Card>&);
 	
 
 	Card get_top_card()
@@ -111,13 +111,36 @@ public:
 		}
 	}
 
-	friend void show(const std::vector<Card>& cs);
+	friend void show(const std::vector<Card>&);
 
 	
 };
 
 
-//TODO: River Class of 5 cards for poker game
+class River
+{
+
+public:
+	std::vector<Card> rhand;
+
+	std::vector<Card>::iterator iter = rhand.begin();
+
+	void deal(Deck& tr)
+	{
+
+		rhand.clear();
+		for (int i = 0; i < 5; i++)
+		{
+			rhand.push_back(tr.get_top_card());
+
+		}
+
+
+	}
+
+	friend void show(const std::vector<Card>&);
+
+};
 
 
 
@@ -164,6 +187,7 @@ int main()
 	
 	Deck d = Deck();
 	Player player;
+	River river;
 	
 	d.init();
 
@@ -173,25 +197,26 @@ int main()
 	d.shuffle();
 	std::cout << "The Shuffled Deck : " << std::endl;
 	show(d.theDeck);
-	
-	
+		
 	player.deal(d);
 	std::cout << "The first dealt two card hand : " << std::endl;
 	show(player.hand);
-	
 
-	
-	
 	std::cout << "The remaining cards in the deck minus the dealt hand : " << std::endl;
 	show(d.theDeck);
 
 	player.deal(d);
 	std::cout << "The second dealt two card hand : " << std::endl;
 	show(player.hand);
-
-	
-	
 	std::cout << "The remaining cards in the deck minus the dealt hand : " << std::endl;
+	show(d.theDeck);
+
+	river.deal(d);
+
+	std::cout << "The all important river : " << std::endl;
+	show(river.rhand);
+
+	std::cout << "The remaining cards in the deck after the river : " << std::endl;
 	show(d.theDeck);
 
 	std::cin.get();
