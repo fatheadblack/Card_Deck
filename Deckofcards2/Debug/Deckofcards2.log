@@ -1,0 +1,5 @@
+﻿  main.cpp
+c:\users\fathead\documents\visual studio 2017\projects\deckofcards2\deckofcards2\main.cpp(68): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\fathead\documents\visual studio 2017\projects\deckofcards2\deckofcards2\main.cpp(68): warning C4244: 'initializing': conversion from 'time_t' to 'const unsigned int', possible loss of data
+c:\users\fathead\documents\visual studio 2017\projects\deckofcards2\deckofcards2\main.cpp(73): warning C4018: '<': signed/unsigned mismatch
+  Deckofcards2.vcxproj -> C:\Users\Fathead\Documents\Visual Studio 2017\Projects\Deckofcards2\Debug\Deckofcards2.exe
