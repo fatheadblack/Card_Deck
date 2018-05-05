@@ -186,30 +186,33 @@ int main()
 {
 	
 	Deck d = Deck();
-	Player player;
+	Player player1;
+	Player player2;
 	River river;
 	
 	d.init();
 
-	std::cout << "The unshuffled Deck : " << std::endl;
-	show(d.theDeck);
+	//std::cout << "The unshuffled Deck : " << std::endl;
+	//show(d.theDeck);
 	
 	d.shuffle();
 	std::cout << "The Shuffled Deck : " << std::endl;
 	show(d.theDeck);
 		
-	player.deal(d);
-	std::cout << "The first dealt two card hand : " << std::endl;
-	show(player.hand);
+	player1.deal(d);
+	std::cout << "Player 1's Hand : " << std::endl;
+	show(player1.hand);
 
-	std::cout << "The remaining cards in the deck minus the dealt hand : " << std::endl;
-	show(d.theDeck);
+	player2.deal(d);
+	std::cout << "Player 2's Hand : " << std::endl;
+	show(player2.hand);
+	//std::cout << "The remaining cards in the deck minus the dealt hand : " << std::endl;
+	//show(d.theDeck);
 
-	player.deal(d);
-	std::cout << "The second dealt two card hand : " << std::endl;
-	show(player.hand);
-	std::cout << "The remaining cards in the deck minus the dealt hand : " << std::endl;
-	show(d.theDeck);
+	
+
+	//std::cout << "The remaining cards in the deck minus the dealt hand : " << std::endl;
+	//show(d.theDeck);
 
 	river.deal(d);
 
