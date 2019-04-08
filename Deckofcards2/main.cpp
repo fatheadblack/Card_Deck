@@ -192,7 +192,7 @@ int main()
 	
 	d.init();
 
-	//std::cout << "The unshuffled Deck : " << std::endl;
+	//std::cout << "The un-shuffled Deck : " << std::endl;
 	//show(d.theDeck);
 	
 	d.shuffle();
