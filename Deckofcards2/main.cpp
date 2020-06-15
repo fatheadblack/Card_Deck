@@ -167,12 +167,12 @@ void show(std::vector<Card>& i)
 			if (it->getval() == 12) face = 'Q';
 			if (it->getval() == 13) face = 'K';
 
-			if (it->getsuit() == 0) suit = 05;
-			if (it->getsuit() == 1)	suit = 04;
-			if (it->getsuit() == 2) suit = 03;
-			if (it->getsuit() == 3) suit = 06;
+			if (it->getsuit() == 0) suit = 'C';
+			if (it->getsuit() == 1)	suit = 'H';
+			if (it->getsuit() == 2) suit = 'S';
+			if (it->getsuit() == 3) suit = 'D';
 
-			std::cout << face << suit << " ";
+			std::cout << face << suit << "  ";
 
 		}
 		std::cout << std::endl;
